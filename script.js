@@ -38,18 +38,36 @@ if ((userChoiceSpecialCharacters==true)) {
 
 randomLetter=chosenCharacters[Math.floor(Math.random() * chosenCharacters.length)]; // should choose a random character from the chosen characters (prompts) 
 
+
+
 console.log(randomLetter + " is the random letter.") // console logs a random character from the chosencharacters
 
 console.log(capitalLetters[0]) // button clicked
 
+var i = ""
+for (let i = randomLetter; i < userChoiceHowMany; i++) {
+
+  randomLetter=chosenCharacters[Math.floor(Math.random() * chosenCharacters.length)]; 
+  console.log(i = " is the password");
+}
+var i = ""
+for (let i = randomLetter; i < userChoiceHowMany; i++) {
+
+  randomLetter=chosenCharacters[Math.floor(Math.random() * chosenCharacters.length)]; 
+  console.log(i = " is the password");
 }
 
 
+}
 
 
-  
+var i = ""
+for (let i = randomLetter; i < userChoiceHowMany; i++) {
 
-  
+  randomLetter=chosenCharacters[Math.floor(Math.random() * chosenCharacters.length)]; 
+  console.log(i = " is the password");
+}
+
 
 
 
