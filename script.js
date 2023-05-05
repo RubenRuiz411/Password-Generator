@@ -1,21 +1,21 @@
 // Assignment code here
 
+
+
+function generatePassword() {
+
 var capitalLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; // Uppercase Letters
 var lowercaseLetters = "abcefghijklmnopqrstuvwxyz";  // Lowercase Letter
 var numbers = "0123456789" // Numbers
-var specialCharacters = "!@#$%^&*()_+~`|}{[]:;?></-=;" // Special Characters
+var specialCharacters = "!@#$%^&*" // Special Characters
 var finalpassword = [""] // placeholder var the end result Password user will see
 
-function generatePassword() {
-// prompts password criteria loop
+var userChoiceHowMany = window.prompt("How many characters? Must be a Minimum of 8, and a Maximum of 128 characters."); // User confirms how many characters for password 
 
-var userChoiceHowMany = window.prompt("How many character? minimum = 8, maximum = 128"); // User confirms how many characters for password 
-
-while (userChoiceHowMany < 8,userChoiceHowMany > 128){
-    userChoiceHowMany++; 
-    window.prompt("How many character? minimum = 8, maximum = 128");
-}
-
+// restarts prompt if the chosen number isn't in the criteria 
+if (userChoiceHowMany < 8 || userChoiceHowMany > 128){
+    return generatePassword();
+} 
 
 var userChoiceNumbers = window.confirm("Would you like Numbers?"); // User confirms if they want Numbers in password 
 var userChoiceSpecialCharacters = window.confirm("Would you like Special Characters?"); // User confirms if they want Special Characters in password 
@@ -41,7 +41,7 @@ for (let i = 0; i < userChoiceHowMany; i++) {
 
   actualpassword.push(randomLetter);
   }
-finalpassword = actualpassword.join(""); // adds the resulted "array" of "actualpassword" to globally scoped var "finalpassword" as a string to eventually be shown on the page
+finalpassword = actualpassword.join(""); // adds the resulted "array" of "actualpassword" to var "finalpassword" as a string to eventually be shown on the page
 return finalpassword;
 }
 
